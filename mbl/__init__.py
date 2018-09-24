@@ -15,7 +15,6 @@ def create_app(config_name):
     :return: application instance
     """
     app = Flask(__name__, template_folder='../api_docs')
-    app.database = DATABASE
     app.config.from_object(config[config_name])
     app.config['BUNDLE_ERRORS'] = True
 
